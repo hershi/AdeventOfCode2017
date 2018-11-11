@@ -93,7 +93,7 @@ fn part2(dest: i32) -> i32 {
 
     grid.insert(Point::new(0,0), 1);
 
-    while true {
+    loop {
         cur_val = calc_val(&mut grid, &cur_point);
         grid.insert(cur_point.clone(), cur_val);
         println!("DBG: {:?} : {}, {:?}", cur_point, cur_val, dir);
@@ -102,8 +102,6 @@ fn part2(dest: i32) -> i32 {
 
         step(&mut cur_point, &mut edge, &mut dir);
     }
-
-    0
 }
 
 fn main() {
